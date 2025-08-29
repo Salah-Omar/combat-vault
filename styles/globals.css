@@ -1,0 +1,26 @@
+@import url('https://fonts.googleapis.com/css2?family=Bebas+Neue&family=Inter:wght@400;500;700;800&display=swap');
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+:root{
+  --bg:#f9f9f9;
+  --surface:#ffffff;
+  --ink:#0e0e0e;
+  --muted:#6b7280;
+  --brand:#D1A954;
+  --punch:#E21D2B;
+  --ring:rgba(0,0,0,.06);
+}
+
+html, body { background: var(--bg); color: var(--ink); }
+.card { background: var(--surface); border-radius: 20px; box-shadow: 0 10px 24px rgba(0,0,0,.08); border: 1px solid rgba(0,0,0,.05); }
+.btn { @apply inline-flex items-center gap-2 px-5 py-3 font-bold; border-radius:999px; }
+.btn-primary { background: var(--punch); color: #fff; }
+.btn-primary:hover { background: #c31622; }
+.btn-outline { border: 1px solid var(--ring); color: var(--ink); }
+.btn-outline:hover { border-color: #000; }
+.pill { display:inline-block; padding:.35rem .7rem; border-radius:999px; background:#00000010; font-size:.75rem; }
+.fade-up { opacity:0; transform: translateY(12px); transition: .45s; }
+.fade-up.show { opacity:1; transform: none; }
+.nav-glass { background: rgba(255,255,255,.8); backdrop-filter: blur(10px); border-bottom: 1px solid rgba(0,0,0,.06) }
