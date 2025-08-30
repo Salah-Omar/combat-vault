@@ -39,10 +39,11 @@ export default function Home() {
         <div className="max-w-7xl mx-auto px-6">
           <h2 className="font-display text-4xl text-[color:var(--brand)] uppercase mb-4">Featured Gear</h2>
         </div>
-        <Suspense fallback={<div className="max-w-7xl mx-auto px-6">Loading…</div>}>
-          {/* @ts-expect-error Async Server Component */}
-          <Featured />
-        </Suspense>
+        {/* Featured is a Server Component; no suppression needed */}
+<Suspense fallback={<div className="muted">Loading…</div>}>
+  <Featured />
+</Suspense>
+
       </section>
     </div>
   )
